@@ -10,7 +10,7 @@
         <!--XBOX-NA Player Search-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="PlayerSearchViewController" customModule="PUBGLifeStats" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -19,20 +19,8 @@
                                 <rect key="frame" x="0.0" y="88" width="414" height="808"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <searchBar contentMode="redraw" barStyle="black" text="" placeholder="Enter Username (Case Sensitive)" translatesAutoresizingMaskIntoConstraints="NO" id="WKJ-IC-18W">
-                                <rect key="frame" x="0.0" y="544" width="414" height="45"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="45" id="CfO-HZ-H4Z"/>
-                                </constraints>
-                                <textInputTraits key="textInputTraits"/>
-                            </searchBar>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <constraints>
-                            <constraint firstAttribute="trailing" secondItem="WKJ-IC-18W" secondAttribute="trailing" id="EbW-ut-H8u"/>
-                            <constraint firstItem="WKJ-IC-18W" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="t4Z-R9-DvB"/>
-                            <constraint firstItem="WKJ-IC-18W" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="456" id="z2R-vm-SY9"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" title="XBOX-NA Player Search" id="Kft-aH-6ur">
@@ -42,10 +30,6 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
-                    <connections>
-                        <outlet property="userNameSearchBar" destination="WKJ-IC-18W" id="BdI-Ic-j6P"/>
-                        <segue destination="mgr-9b-Bcg" kind="show" identifier="toDetailVC" id="RAf-xq-dS4"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -54,7 +38,7 @@
         <!--Lifetime Stats-->
         <scene sceneID="qN3-1D-Wdi">
             <objects>
-                <viewController id="mgr-9b-Bcg" customClass="PlayerStatsViewController" customModule="PUBGLifeStats" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="mgr-9b-Bcg" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="S4c-ux-0LN">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -74,13 +58,13 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="wHr-yV-vuP">
                                         <rect key="frame" x="0.0" y="0.0" width="110" height="112"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total Kills:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4IO-nr-oYr">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Longest Kill:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4IO-nr-oYr">
                                                 <rect key="frame" x="0.0" y="0.0" width="110" height="24"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Longest Kill:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ffL-1N-7e6">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total Kills:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ffL-1N-7e6">
                                                 <rect key="frame" x="0.0" y="44" width="110" height="24"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                 <nil key="textColor"/>
@@ -145,12 +129,6 @@
                         <viewLayoutGuide key="safeArea" id="U3d-CZ-VlE"/>
                     </view>
                     <navigationItem key="navigationItem" title="Lifetime Stats" id="cYV-Du-m7O"/>
-                    <connections>
-                        <outlet property="killsLabel" destination="Hab-TN-E89" id="g2f-oH-y87"/>
-                        <outlet property="longestKillLabel" destination="KUe-pk-Oun" id="beF-qm-ngS"/>
-                        <outlet property="playerNameLabel" destination="ejX-Hj-ea5" id="SQQ-c6-WRd"/>
-                        <outlet property="winsLabel" destination="nwe-pW-oFF" id="9GL-Kz-Qi7"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="grq-pY-dDJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -175,9 +153,6 @@
             <point key="canvasLocation" x="299" y="138"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="Jii-ov-s8V"/>
-    </inferredMetricsTieBreakers>
     <resources>
         <image name="carePackage" width="1080" height="1920"/>
         <image name="lastSurvivor" width="1440" height="2560"/>

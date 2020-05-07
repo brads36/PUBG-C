@@ -13,6 +13,8 @@
 		787AFFD22464A0FE00FC44C5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 787AFFD02464A0FE00FC44C5 /* LaunchScreen.storyboard */; };
 		787AFFD52464A0FE00FC44C5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 787AFFD42464A0FE00FC44C5 /* main.m */; };
 		787AFFE52464A57800FC44C5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 787AFFE42464A57800FC44C5 /* Main.storyboard */; };
+		787AFFE82464A64900FC44C5 /* WBBPlayerStats.m in Sources */ = {isa = PBXBuildFile; fileRef = 787AFFE72464A64900FC44C5 /* WBBPlayerStats.m */; };
+		787AFFF02464B07800FC44C5 /* WBBPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 787AFFEF2464B07800FC44C5 /* WBBPlayer.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,10 @@
 		787AFFD32464A0FE00FC44C5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		787AFFD42464A0FE00FC44C5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		787AFFE42464A57800FC44C5 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		787AFFE62464A64900FC44C5 /* WBBPlayerStats.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WBBPlayerStats.h; sourceTree = "<group>"; };
+		787AFFE72464A64900FC44C5 /* WBBPlayerStats.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WBBPlayerStats.m; sourceTree = "<group>"; };
+		787AFFEE2464B07800FC44C5 /* WBBPlayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WBBPlayer.h; sourceTree = "<group>"; };
+		787AFFEF2464B07800FC44C5 /* WBBPlayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WBBPlayer.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +64,7 @@
 		787AFFC12464A0FE00FC44C5 /* PUBG-C */ = {
 			isa = PBXGroup;
 			children = (
+				787AFFE92464A92900FC44C5 /* Helpers */,
 				787AFFE12464A1F700FC44C5 /* Controllers */,
 				787AFFDD2464A1CC00FC44C5 /* Models */,
 				787AFFDC2464A1C300FC44C5 /* Views */,
@@ -92,6 +99,10 @@
 		787AFFDD2464A1CC00FC44C5 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				787AFFE62464A64900FC44C5 /* WBBPlayerStats.h */,
+				787AFFE72464A64900FC44C5 /* WBBPlayerStats.m */,
+				787AFFEE2464B07800FC44C5 /* WBBPlayer.h */,
+				787AFFEF2464B07800FC44C5 /* WBBPlayer.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -117,6 +128,13 @@
 				787AFFDE2464A1D700FC44C5 /* View Controller */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		787AFFE92464A92900FC44C5 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -192,6 +210,8 @@
 			files = (
 				787AFFC42464A0FE00FC44C5 /* AppDelegate.m in Sources */,
 				787AFFD52464A0FE00FC44C5 /* main.m in Sources */,
+				787AFFE82464A64900FC44C5 /* WBBPlayerStats.m in Sources */,
+				787AFFF02464B07800FC44C5 /* WBBPlayer.m in Sources */,
 				787AFFC72464A0FE00FC44C5 /* SceneDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
