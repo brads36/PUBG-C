@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="50K-5Q-PfB">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--XBOX-NA Player Search-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="PlayerSearchViewController" customModule="PUBGLifeStats" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="carePackage" adjustsImageSizeForAccessibilityContentSizeCategory="YES" id="EiB-gh-Idb">
+                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <searchBar contentMode="redraw" barStyle="black" text="" placeholder="Enter Username (Case Sensitive)" translatesAutoresizingMaskIntoConstraints="NO" id="WKJ-IC-18W">
+                                <rect key="frame" x="0.0" y="544" width="414" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="CfO-HZ-H4Z"/>
+                                </constraints>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="WKJ-IC-18W" secondAttribute="trailing" id="EbW-ut-H8u"/>
+                            <constraint firstItem="WKJ-IC-18W" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="t4Z-R9-DvB"/>
+                            <constraint firstItem="WKJ-IC-18W" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="456" id="z2R-vm-SY9"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="XBOX-NA Player Search" id="Kft-aH-6ur">
+                        <barButtonItem key="rightBarButtonItem" title="Item" id="WqW-fy-ptR">
+                            <connections>
+                                <segue destination="mgr-9b-Bcg" kind="show" id="Jii-ov-s8V"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="userNameSearchBar" destination="WKJ-IC-18W" id="BdI-Ic-j6P"/>
+                        <segue destination="mgr-9b-Bcg" kind="show" identifier="toDetailVC" id="RAf-xq-dS4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1047.8260869565217" y="137.94642857142856"/>
+        </scene>
+        <!--Lifetime Stats-->
+        <scene sceneID="qN3-1D-Wdi">
+            <objects>
+                <viewController id="mgr-9b-Bcg" customClass="PlayerStatsViewController" customModule="PUBGLifeStats" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="S4c-ux-0LN">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lastSurvivor" translatesAutoresizingMaskIntoConstraints="NO" id="rzf-hH-3Zn">
+                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(Player Name)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ejX-Hj-ea5">
+                                <rect key="frame" x="8" y="148" width="398" height="131"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="p6m-TB-YtF">
+                                <rect key="frame" x="107" y="419" width="200" height="112"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="wHr-yV-vuP">
+                                        <rect key="frame" x="0.0" y="0.0" width="110" height="112"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total Kills:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4IO-nr-oYr">
+                                                <rect key="frame" x="0.0" y="0.0" width="110" height="24"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Longest Kill:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ffL-1N-7e6">
+                                                <rect key="frame" x="0.0" y="44" width="110" height="24"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total Wins:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Mp-nu-F54">
+                                                <rect key="frame" x="0.0" y="88" width="110" height="24"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="110" id="1H9-0D-crT"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="FL2-Ya-Nxw">
+                                        <rect key="frame" x="110" y="0.0" width="90" height="112"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(longestKill)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KUe-pk-Oun">
+                                                <rect key="frame" x="0.0" y="0.0" width="90" height="24"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(kills)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hab-TN-E89">
+                                                <rect key="frame" x="0.0" y="44" width="90" height="24"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(wins)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nwe-pW-oFF">
+                                                <rect key="frame" x="0.0" y="88" width="90" height="24"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="wHr-yV-vuP" firstAttribute="top" secondItem="p6m-TB-YtF" secondAttribute="top" id="IbO-gG-dEC"/>
+                                    <constraint firstAttribute="bottom" secondItem="wHr-yV-vuP" secondAttribute="bottom" id="hcY-Xc-D9o"/>
+                                    <constraint firstAttribute="width" constant="200" id="nsB-B0-gFT"/>
+                                    <constraint firstItem="wHr-yV-vuP" firstAttribute="leading" secondItem="p6m-TB-YtF" secondAttribute="leading" id="you-EH-CD6"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="rzf-hH-3Zn" firstAttribute="top" secondItem="U3d-CZ-VlE" secondAttribute="top" id="1ig-x8-7gc"/>
+                            <constraint firstItem="ejX-Hj-ea5" firstAttribute="top" secondItem="U3d-CZ-VlE" secondAttribute="top" constant="60" id="6cL-uh-H4r"/>
+                            <constraint firstItem="rzf-hH-3Zn" firstAttribute="centerX" secondItem="S4c-ux-0LN" secondAttribute="centerX" id="6dn-N1-m5j"/>
+                            <constraint firstItem="p6m-TB-YtF" firstAttribute="centerY" secondItem="U3d-CZ-VlE" secondAttribute="centerY" id="Ia5-xe-eGH"/>
+                            <constraint firstItem="ejX-Hj-ea5" firstAttribute="leading" secondItem="U3d-CZ-VlE" secondAttribute="leading" constant="8" id="UqG-D6-5Hg"/>
+                            <constraint firstItem="rzf-hH-3Zn" firstAttribute="leading" secondItem="U3d-CZ-VlE" secondAttribute="leading" id="VVu-vJ-Y81"/>
+                            <constraint firstItem="U3d-CZ-VlE" firstAttribute="trailing" secondItem="ejX-Hj-ea5" secondAttribute="trailing" constant="8" id="axW-Jl-afA"/>
+                            <constraint firstItem="p6m-TB-YtF" firstAttribute="centerX" secondItem="U3d-CZ-VlE" secondAttribute="centerX" id="fQ2-2o-7So"/>
+                            <constraint firstItem="p6m-TB-YtF" firstAttribute="top" secondItem="ejX-Hj-ea5" secondAttribute="bottom" constant="140" id="wDF-YC-4Qp"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="rzf-hH-3Zn" secondAttribute="bottom" constant="-34" id="xps-0b-L6F"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="U3d-CZ-VlE"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Lifetime Stats" id="cYV-Du-m7O"/>
+                    <connections>
+                        <outlet property="killsLabel" destination="Hab-TN-E89" id="g2f-oH-y87"/>
+                        <outlet property="longestKillLabel" destination="KUe-pk-Oun" id="beF-qm-ngS"/>
+                        <outlet property="playerNameLabel" destination="ejX-Hj-ea5" id="SQQ-c6-WRd"/>
+                        <outlet property="winsLabel" destination="nwe-pW-oFF" id="9GL-Kz-Qi7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="grq-pY-dDJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1824.6376811594205" y="137.94642857142856"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="X78-5t-Vvm">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="50K-5Q-PfB" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="qdW-ZJ-Mqu">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="1Qp-8Q-MF3"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8fk-HB-rtI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="299" y="138"/>
+        </scene>
+    </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="Jii-ov-s8V"/>
+    </inferredMetricsTieBreakers>
+    <resources>
+        <image name="carePackage" width="1080" height="1920"/>
+        <image name="lastSurvivor" width="1440" height="2560"/>
+    </resources>
+</document>
